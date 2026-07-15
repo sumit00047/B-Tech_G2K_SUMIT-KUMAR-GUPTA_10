@@ -1,19 +1,10 @@
-#include<stdio.h> //pair jo 12 ke barbar ho.
-int main (){
-    int arr[8]={1,2,3,4,5,6,7,8};
-    int totalpairs=0;
-    int x=12;
-    for (int i = 0; i <= 7; i++)
-    {
-        for (int j = i+1; i <=7; j++)
-        {
-            if(arr[i]+arr[j]==x){
-                totalpairs++;
-                printf("(%d,%d)\n",arr[i],arr[j]);
-            }
-        }
-        
+# include <stdio.h>
+int factorial(int x){
+    int fact =1;
+ for(int i=2;i<=x;i++){
+        fact=fact*i;
     }
-    printf("%d",totalpairs);
-    return 0;
+    return fact;
 }
+int combination(int n, int r){
+      int ncr =factorial(n)/(factorial(r)*factorial(n-r));
